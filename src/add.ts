@@ -15,7 +15,12 @@ rds.executeStatement({
     includeResultMetadata: true,
     resourceArn: process.env.RDS_ARN || 'arn:aws:rds:ap-southeast-1:000000000000:cluster:fakedb',
     secretArn: process.env.RDS_ARN_SECRET || 'arn:aws:secretsmanager:ap-southeast-1:000000000000:secret:Secret-Fake-Data-QWERTY',
-    sql: 'INSERT INTO users (uuid, name, email, password, role, apiToken, createdAt, updatedAt) values (:uuid, :name, :email, :password, :role, :apiToken, :createdAt, :updatedAt)',
+    sql: `
+        INSERT INTO users
+        (uuid, name, email, password, role, apiToken, createdAt, updatedAt)
+        values 
+        (:uuid, :name, :email, :password, :role, :apiToken, :createdAt, :updatedAt)
+    `,
     parameters: [
         {
             name: 'uuid',
