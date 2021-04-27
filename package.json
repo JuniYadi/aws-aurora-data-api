@@ -1,0 +1,26 @@
+{
+  "name": "aurora-data-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rf ./build && tsc -w",
+    "build": "rm -rf ./build && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.893.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.1",
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^15.0.0",
+    "@types/uuid": "^8.3.0",
+    "typescript": "^4.2.4"
+  }
+}
